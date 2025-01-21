@@ -68,7 +68,7 @@ public class HtmlLexicalAnalyzer {
 
     private void GetNextCharacter() {
         if (_currentCharacterCode == -1) {
-            System.out.println("GetNextCharacter method called at the end of a stream");
+            System.out.println("Error at the last line");
             return;
         }
 
@@ -214,7 +214,6 @@ public class HtmlLexicalAnalyzer {
     }
 
     private void GetNextTagToken() {
-        System.out.println(SymbolTable.symbolTable);
         if (IsAtEndOfStream()) {
             _tokenList.add(HtmlToken.EOF);
             return;

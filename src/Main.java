@@ -26,9 +26,7 @@ public class Main {
                     return;
                 }
                 for (File dirFile : files) {
-                    System.out.println(dirFile.getName());
                     if (dirFile.isFile() && dirFile.getName().endsWith(".html")){
-                        System.out.println(dirFile.getName());
                         htmlToMd(dirFile);
                     }
                 }

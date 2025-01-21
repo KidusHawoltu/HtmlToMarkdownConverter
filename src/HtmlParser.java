@@ -48,7 +48,6 @@ public class HtmlParser {
     }
 
     private void ParseNextToken(){
-        System.out.println(this);
         if (_tokenList.get(_index) == HtmlToken.OpeningTagStart) {
 //            System.out.println("1");
             if (_tokenList.get(_index + 1) != HtmlToken.Name || _canAddToStack) {
