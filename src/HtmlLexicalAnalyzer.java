@@ -31,9 +31,7 @@ public class HtmlLexicalAnalyzer {
     }
 
     public List<HtmlToken> GetTokens() {
-        System.out.println("a");
         while (_tokenList.isEmpty() || _tokenList.getLast() != HtmlToken.EOF) GetNextContentToken();
-        System.out.println("b");
         return _tokenList;
     }
 
@@ -157,10 +155,7 @@ public class HtmlLexicalAnalyzer {
     }
 
     private void GetNextContentToken() {
-        System.out.println(this);
-        System.out.println(SymbolTable.symbolTable);
         if (IsAtEndOfStream()) {
-            System.out.println("c");
             _tokenList.add(HtmlToken.EOF);
             return;
         }
@@ -219,13 +214,7 @@ public class HtmlLexicalAnalyzer {
     }
 
     private void GetNextTagToken() {
-        System.out.println(this + " tag");
         System.out.println(SymbolTable.symbolTable);
-//        try {
-//            Thread.sleep(100);
-//        } catch (InterruptedException e) {
-//            throw new RuntimeException(e);
-//        }
         if (IsAtEndOfStream()) {
             _tokenList.add(HtmlToken.EOF);
             return;
@@ -314,8 +303,6 @@ public class HtmlLexicalAnalyzer {
             GetNextCharacter();
         }
 
-        System.out.println("attr " + _value);
-        
         return _value.toString();
     }
 

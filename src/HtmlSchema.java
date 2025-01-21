@@ -61,6 +61,7 @@ public class HtmlSchema {
         _htmlInlineElements.add("abbr");
         _htmlInlineElements.add("acronym");
         _htmlInlineElements.add("address");
+        _htmlInlineElements.add("audio");
         _htmlInlineElements.add("b");
         _htmlInlineElements.add("bdo"); // ???
         _htmlInlineElements.add("big");
@@ -87,6 +88,7 @@ public class HtmlSchema {
         _htmlInlineElements.add("sup");
         _htmlInlineElements.add("u");
         _htmlInlineElements.add("var"); // indicates an instance of a program variable
+        _htmlInlineElements.add("video");
     }
 
     private void InitializeBlockElements() {
@@ -94,6 +96,8 @@ public class HtmlSchema {
 
         _htmlBlockElements.add("blockquote");
         _htmlBlockElements.add("body");
+        _htmlBlockElements.add("header");
+        _htmlBlockElements.add("footer");
         _htmlBlockElements.add("caption");
         _htmlBlockElements.add("center");
         _htmlBlockElements.add("cite");
@@ -160,6 +164,8 @@ public class HtmlSchema {
         _htmlEmptyElements.add("link");
         _htmlEmptyElements.add("meta");
         _htmlEmptyElements.add("param");
+        _htmlEmptyElements.add("track");
+        _htmlEmptyElements.add("source");
     }
 
     private void InitializeElementsClosingOnParentElementEnd() {

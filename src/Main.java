@@ -14,7 +14,7 @@ public class Main {
             }
             else if (inputFile.isFile()) {
                 if (!inputFile.getName().endsWith("html")) {
-                    System.out.println("The file isn't a html file");
+                    System.out.println("The file isn't an html file");
                     return;
                 }
                 htmlToMd(inputFile);
@@ -26,7 +26,9 @@ public class Main {
                     return;
                 }
                 for (File dirFile : files) {
+                    System.out.println(dirFile.getName());
                     if (dirFile.isFile() && dirFile.getName().endsWith(".html")){
+                        System.out.println(dirFile.getName());
                         htmlToMd(dirFile);
                     }
                 }
@@ -37,29 +39,13 @@ public class Main {
     }
 
     public static void htmlToMd(File file) throws IOException {
-//        System.out.println("start");
-//        System.out.println(file);
-//        FileInputStream fileInputStream = new FileInputStream(file);
-//        System.out.println(fileInputStream.toString());
-//        ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-//        System.out.println("1a");
-//        String inputString = objectInputStream.readUTF();
         String inputString = new Scanner(file).useDelimiter("\\Z").next();
-        System.out.println("2nd");
-        System.out.println(inputString);
         HtmlParser htmlParser = new HtmlParser(inputString);
-        System.out.println("3rd");
         String outputString = htmlParser.GetMd();
-        System.out.println("hahaha");
         if (outputString == null) {
             System.out.println("Failed to convert " + file.getName() + " to .md file");
             return;
         }
-
-//        FileOutputStream fileOutputStream = new FileOutputStream(outputFile);
-//        ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
-//        objectOutputStream.writeUTF(outputString);
-//        objectOutputStream.flush();
 
         File outputFile = new File(file.getAbsoluteFile().toString().replace(".html", ".md"));
         PrintWriter out = new PrintWriter(outputFile);
