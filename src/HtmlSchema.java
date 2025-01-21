@@ -63,23 +63,23 @@ public class HtmlSchema {
         _htmlInlineElements.add("address");
         _htmlInlineElements.add("audio");
         _htmlInlineElements.add("b");
-        _htmlInlineElements.add("bdo"); // ???
+        _htmlInlineElements.add("bdo");
         _htmlInlineElements.add("big");
         _htmlInlineElements.add("button");
         _htmlInlineElements.add("code");
-        _htmlInlineElements.add("del"); // deleted text
+        _htmlInlineElements.add("del"); // deleted text (strikethrough)
         _htmlInlineElements.add("dfn");
         _htmlInlineElements.add("em");
         _htmlInlineElements.add("font");
         _htmlInlineElements.add("i");
-        _htmlInlineElements.add("ins"); // inserted text
-        _htmlInlineElements.add("kbd"); // text to entered by a user
+        _htmlInlineElements.add("ins"); // inserted text (just underlined)
+        _htmlInlineElements.add("kbd");
         _htmlInlineElements.add("label");
-        _htmlInlineElements.add("legend"); // ???
+        _htmlInlineElements.add("legend");
         _htmlInlineElements.add("mark");
-        _htmlInlineElements.add("q"); // short inline quotation
+        _htmlInlineElements.add("q");
         _htmlInlineElements.add("s"); // strike-through text style
-        _htmlInlineElements.add("samp"); // Specifies a code sample
+        _htmlInlineElements.add("samp");
         _htmlInlineElements.add("small");
         _htmlInlineElements.add("span");
         _htmlInlineElements.add("strike");
@@ -87,7 +87,7 @@ public class HtmlSchema {
         _htmlInlineElements.add("sub");
         _htmlInlineElements.add("sup");
         _htmlInlineElements.add("u");
-        _htmlInlineElements.add("var"); // indicates an instance of a program variable
+        _htmlInlineElements.add("var");
         _htmlInlineElements.add("video");
     }
 
@@ -102,11 +102,11 @@ public class HtmlSchema {
         _htmlBlockElements.add("center");
         _htmlBlockElements.add("cite");
         _htmlBlockElements.add("dd");
-        _htmlBlockElements.add("dir"); //  treat as UL element
+        _htmlBlockElements.add("dir");
         _htmlBlockElements.add("div");
         _htmlBlockElements.add("dl");
         _htmlBlockElements.add("dt");
-        _htmlBlockElements.add("form"); // Not a block according to XHTML spec
+        _htmlBlockElements.add("form");
         _htmlBlockElements.add("h1");
         _htmlBlockElements.add("h2");
         _htmlBlockElements.add("h3");
@@ -115,10 +115,10 @@ public class HtmlSchema {
         _htmlBlockElements.add("h6");
         _htmlBlockElements.add("html");
         _htmlBlockElements.add("li");
-        _htmlBlockElements.add("menu"); //  treat as UL element
+        _htmlBlockElements.add("menu");
         _htmlBlockElements.add("ol");
         _htmlBlockElements.add("p");
-        _htmlBlockElements.add("pre"); // Renders text in a fixed-width font
+        _htmlBlockElements.add("pre");
         _htmlBlockElements.add("table");
         _htmlBlockElements.add("tbody");
         _htmlBlockElements.add("td");

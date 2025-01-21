@@ -10,14 +10,15 @@ public class HtmlToMarkdown {
         HtmlMd = new HashMap<>(Map.ofEntries(
                 entry("p", Map.of(true,"  \n", false, "  \n")),
                 entry("strong", Map.of(true,"**", false, "**")),
-                entry("b", Map.of(true,"**", false, "**")),
+                entry("b", Map.of(true,"**", false, "**")), // depreciated version for bold
                 entry("em", Map.of(true,"*", false, "*")),
-                entry("i", Map.of(true,"*", false, "*")),
+                entry("i", Map.of(true,"*", false, "*")), // depreciated version for italics
                 entry("title", Map.of(true, "\n", false, "\n========================\n")),
                 entry("sub", Map.of(true,"~", false, "~")),
                 entry("sup", Map.of(true,"^", false, "^")),
                 entry("mark", Map.of(true,"==", false, "==")),
                 entry("del", Map.of(true,"~~", false, "~~")),
+                entry("s", Map.of(true,"~~", false, "~~")), // depreciated version for strikethrough
                 entry("a", Map.of(true,"\n[", false, "]")),
                 entry("br", Map.of(true,"   \n", false, "  \n")),
                 entry("dt", Map.of(true,"\n", false, "")),
